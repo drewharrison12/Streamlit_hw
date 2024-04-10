@@ -39,9 +39,8 @@ option = st.selectbox(
 st.write("### (2) add a multi-select for Sub_Category *in the selected Category (1)* (https://docs.streamlit.io/library/api-reference/widgets/st.multiselect)")
 
 options = st.multiselect(
-    'What are your favorite colors',
-    ['Green', 'Yellow', 'Red', 'Blue'],
-    ['Yellow', 'Red']
+    'Pick a subcategory',
+    df[df['Category'] == option]['Sub_Category']
     )
 
 st.dataframe(df[df['Category'] == option])
