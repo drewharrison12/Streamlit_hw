@@ -74,7 +74,7 @@ st.write("### (4) show three metrics (https://docs.streamlit.io/library/api-refe
 sales = df2['Sales'].sum()
 profit = df2['Profit'].sum()
 margin = (sales - profit)/sales
-st.write(sales)
+st.write('Total Sales' + str(sales))
 st.write(profit)
 st.write(margin)
 
