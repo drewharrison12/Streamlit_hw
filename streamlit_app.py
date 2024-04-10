@@ -74,9 +74,9 @@ st.write("### (4) show three metrics (https://docs.streamlit.io/library/api-refe
 sales = df2['Sales'].sum()
 profit = df2['Profit'].sum()
 margin = 1 - (sales - profit)/sales
-st.write('Total Sales: $' + str(round(sales,2)))
-st.write('Total Profit: $' + str(round(profit,2)))
-st.write('Overall Profit Margin: ' + str(round(margin,2)))
+st.write('#Total Sales: $' + str(round(sales,2)))
+st.write('#Total Profit: $' + str(round(profit,2)))
+st.write('#Overall Profit Margin: ' + str(round(margin,2)))
 
 
 st.write("### (5) use the delta option in the overall profit margin metric to show the difference between the overall average profit margin (all products across all categories)")
