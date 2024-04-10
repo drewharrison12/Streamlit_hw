@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
-import math
+#import matplotlib.pyplot as plt
+#import math
 
 st.title("Data App Assignment")
 
