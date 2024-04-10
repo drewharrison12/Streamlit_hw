@@ -43,7 +43,7 @@ options = st.multiselect(
     df[df['Category'] == option]['Sub_Category'].unique()
     )
 
-st.write(option)
+st.write(type(option))
 st.dataframe(df[df['Category'] == option])
 
 
