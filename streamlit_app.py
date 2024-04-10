@@ -52,9 +52,12 @@ st.write("### (3) show a line chart of sales for the selected items in (2)")
 st.write(type(options))
 st.dataframe(df[df['Sub_Category'].isin(options)])
 
+df2 = df[df['Sub_Category'].isin(options)]
 
-filtered_sales_by_month = st.dataframe(df[df['Sub_Category'].isin(options)]).filter(items=['Sales']).groupby(pd.Grouper(freq='M')).sum()
-st.line_chart(filtered_sales_by_month, y="Sales")
+st.dataframe(df2.filter(items=['Sales']))
+
+#filtered_sales_by_month = st.dataframe(df[df['Sub_Category'].isin(options)]).filter(items=['Sales']).groupby(pd.Grouper(freq='M')).sum()
+#st.line_chart(filtered_sales_by_month, y="Sales")
 
 
 #I tried to follow the same logic as the line graph example that was provided
