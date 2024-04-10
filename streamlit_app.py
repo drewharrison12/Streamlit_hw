@@ -34,7 +34,7 @@ st.write("### (1) add a drop down for Category (https://docs.streamlit.io/librar
 
 option = st.selectbox(
     'Category',
-    df["Category"])
+    df["Category"].unique())
 
 st.write("### (2) add a multi-select for Sub_Category *in the selected Category (1)* (https://docs.streamlit.io/library/api-reference/widgets/st.multiselect)")
 st.write("### (3) show a line chart of sales for the selected items in (2)")
