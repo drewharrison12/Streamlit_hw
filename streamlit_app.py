@@ -43,13 +43,13 @@ options = st.multiselect(
     df[df['Category'] == option]['Sub_Category'].unique()
     )
 
-st.write(type(option))
+st.write(option)
 st.dataframe(df[df['Category'] == option])
 
 
 st.write("### (3) show a line chart of sales for the selected items in (2)")
 
-st.write(options)
+st.write(type(options))
 st.dataframe(df[df['Sub_Category'] == options])
 
 st.write("### (4) show three metrics (https://docs.streamlit.io/library/api-reference/data/st.metric) for the selected items in (2): total sales, total profit, and overall profit margin (%)")
