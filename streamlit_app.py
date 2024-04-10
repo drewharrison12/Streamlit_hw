@@ -57,6 +57,7 @@ df2 = df[df['Sub_Category'].isin(options)]
 st.dataframe(df2.filter(items=['Sales']).groupby(pd.Grouper(freq='M')).sum())
 
 sales_by_month_filter = df2.filter(items=['Sales']).groupby(pd.Grouper(freq='M')).sum()
+st.line_chart(sales_by_month_filter, y='Sales')
 
 #filtered_sales_by_month = st.dataframe(df[df['Sub_Category'].isin(options)]).filter(items=['Sales']).groupby(pd.Grouper(freq='M')).sum()
 #st.line_chart(filtered_sales_by_month, y="Sales")
