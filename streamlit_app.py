@@ -78,13 +78,13 @@ margin = 1 - (sales - profit)/sales
 st.metric(label="Total Sales", value=sales)
 
 col1, col2, col3 = st.columns(3)
-col1.metric("Sales", str(round(sales,2)))
-col2.metric("Profit", str(round(profit,2)))
-col3.metric("Margin", str(round(margin,2)))
+col1.metric("Sales", '$'+str(round(sales,2)))
+col2.metric("Profit", '$'+str(round(profit,2)))
+col3.metric("Margin", str(round(margin,4)))
 
 st.write('### Total Sales: $' + str(round(sales,2)))
 st.write('### Total Profit: $' + str(round(profit,2)))
-st.write('### Overall Profit Margin: ' + str(round(margin,2)))
+st.write('### Overall Profit Margin: ' + str(round(margin,4)))
 
 
 st.write("### (5) use the delta option in the overall profit margin metric to show the difference between the overall average profit margin (all products across all categories)")
