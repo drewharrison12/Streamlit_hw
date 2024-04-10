@@ -90,8 +90,8 @@ st.write("### (5) use the delta option in the overall profit margin metric to sh
 
 sales_all = df['Sales'].sum()
 profit_all = df['Profit'].sum()
-margin_all = sales_all - profit_all
+margin_all = 1 - (sales_all - profit_all)/sales_all
 
 margin_diff = margin - margin_all
 
-st.metric("Margin Comparison", str(round(margin_all,4), ))
+st.metric("Margin Comparison", str(round(margin_all,4), delta=margin_diff))
