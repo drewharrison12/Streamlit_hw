@@ -77,6 +77,10 @@ margin = 1 - (sales - profit)/sales
 
 st.metric(label="Total Sales", value=sales)
 
+col1, col2, col3 = st.columns(3)
+col1.metric("Sales", sales)
+col2.metric("Profit", profit)
+col3.metric("Margin", margin)
 
 st.write('### Total Sales: $' + str(round(sales,2)))
 st.write('### Total Profit: $' + str(round(profit,2)))
