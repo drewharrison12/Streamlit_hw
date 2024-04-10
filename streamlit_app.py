@@ -54,7 +54,7 @@ st.dataframe(df[df['Sub_Category'].isin(options)])
 
 df2 = df[df['Sub_Category'].isin(options)]
 
-st.dataframe(df2.filter(items=['Sales']).groupby(pd.Grouper(freq='M')))
+st.dataframe(df2.filter(items=['Sales']).groupby(pd.Grouper(freq='M')).sum())
 
 
 
