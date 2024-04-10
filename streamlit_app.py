@@ -43,7 +43,8 @@ options = st.multiselect(
     df[df['Category'] == option]['Sub_Category'].unique()
     )
 
-#st.dataframe(df[df['Category'] == option])
+st.write(option)
+st.dataframe(df[df['Category'] == option])
 
 
 st.write("### (3) show a line chart of sales for the selected items in (2)")
