@@ -94,4 +94,4 @@ margin_all = 1 - (sales_all - profit_all)/sales_all
 
 margin_diff = margin - margin_all
 
-st.metric("Margin Comparison", str(round(margin_all,4)), delta=round(margin_diff, 2))
+st.metric("Total Margin with Comparison", str(round(margin_all,4)), delta=round(margin_diff, 2))
